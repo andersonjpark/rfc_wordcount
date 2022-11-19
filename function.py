@@ -3,7 +3,7 @@ import os
 import re
 import collections
 
-def word_normalizer(dirty_sentence):
+def word_normalizer(dirty_sentence: str) -> list:
     """ Input : counter, un-normalized sentence
         Output: list
         Description: This function takes a unnormalized sentence, normalize it,
@@ -14,7 +14,7 @@ def word_normalizer(dirty_sentence):
     clean_list = upper_sentence.split()  # Returns list that contains words of sentence
     return clean_list
 
-def get_file_paths(root_dir):
+def get_file_paths(root_dir: str) -> list:
     """ Input : directory
         Output: list
         Description: This function will generate the file names in a directory
@@ -31,7 +31,7 @@ def get_file_paths(root_dir):
             path_list.append(filepath) # Append to list.
     return path_list
 
-def execution_f(path_list):
+def execution_f(path_list: list) -> collections.Counter:
     """ Input : List
         Output: Counter
         Description: This function will take a list of all file directories, open
@@ -46,7 +46,7 @@ def execution_f(path_list):
                 if dirty_sentence == '\r\n':
                     break
             dirty_file = openFile.read() # Feeding total body
-            clean_counter = word_normalizer(dirty_file)
+            clean_counter.update(word_normalizer(dirty_file))
     print('end process')
     return clean_counter
 
