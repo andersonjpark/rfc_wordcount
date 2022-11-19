@@ -1,4 +1,4 @@
-from mtFunctionFile import execution_f, get_file_paths, print_dict, writeDict
+from function import execution_f, get_file_paths, print_dict, writeDict
 from ray.util.multiprocessing import Pool
 import numpy as np
 import collections
