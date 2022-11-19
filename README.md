@@ -6,7 +6,6 @@ This program will read every raw RFC 5322 file inside the target directory, norm
 
 ## File Description:
 * server.py is the python file that will be run to print a list of word frequencies.
-
 * function.py is the python file that contains all the functions used in fastfreq and it's descriptions.
 
 
